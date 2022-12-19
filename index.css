@@ -22,6 +22,24 @@ button {
     color: white;
     padding: 10px 20px;
     font-weight: bold;
+    border-radius: 2px;
+    transition: 0.4s;
+}
+button:hover {
+    transform: scale(1.01);
+}
+
+button#input-btn:hover {
+    background-color: #53803a;
+}
+
+button#delete-btn {
+    background-color: white;
+    color: #5f9341;
+    border: 1px solid #5f9341;
+}
+button#delete-btn:hover {
+    background-color: rgb(249, 249, 249);
 }
 
 ul {
