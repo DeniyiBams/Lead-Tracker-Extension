@@ -18,7 +18,7 @@ input {
 
 button {
     background-color: #5f9341;
-    border: none;
+    border: 1px solid #5f9341;
     color: white;
     padding: 10px 20px;
     font-weight: bold;
@@ -36,7 +36,6 @@ button#input-btn:hover {
 button#delete-btn {
     background-color: white;
     color: #5f9341;
-    border: 1px solid #5f9341;
 }
 button#delete-btn:hover {
     background-color: rgb(249, 249, 249);
