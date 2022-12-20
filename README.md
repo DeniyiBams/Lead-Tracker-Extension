@@ -1,0 +1,1 @@
+An extension used to save links for easy access whenever needed.
