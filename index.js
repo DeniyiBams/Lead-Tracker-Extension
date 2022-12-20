@@ -1,6 +1,7 @@
 let myLeads = []
 const inputBtn = document.getElementById("input-btn")
 const deleteBtn = document.getElementById("delete-btn")
+const tabBtn = document.getElementById("tab-btn")
 const inputEl = document.getElementById("input-el")
 const ulEl = document.getElementById("ul-el")
 
@@ -16,6 +17,10 @@ inputBtn.addEventListener("click", function() {
     inputEl.value=""
     localStorage.setItem("myLeads", JSON.stringify(myLeads))
     renderLeads()
+})
+
+tabBtn.addEventListener("click", function() {
+    
 })
 
 deleteBtn.addEventListener("dblclick", function() {
