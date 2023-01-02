@@ -14,6 +14,12 @@ input {
     margin-bottom: 4px;
     width: 100%;
     padding: 12px 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 4px;
+}
+
+input[id="title-el"] {
+    width: 50%;
 }
 
 button {
@@ -53,4 +59,13 @@ li {
 
 li a {
     color: #5f9341;
+}
+
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 2px solid #5f9341;
 }
