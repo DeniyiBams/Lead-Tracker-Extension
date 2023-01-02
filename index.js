@@ -1,4 +1,4 @@
-let myLeads = new Object()
+let myLeads = {}
 const inputBtn = document.getElementById("input-btn")
 const deleteBtn = document.getElementById("delete-btn")
 const tabBtn = document.getElementById("tab-btn")
@@ -24,16 +24,16 @@ inputBtn.addEventListener("click", function() {
 tabBtn.addEventListener("click", function() {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
         // myLeads.push(tabs[0].url)
-        const tabLink = tabs[0].url
-        inputEl.value = tabLink
-        // localStorage.setItem("myLeads", JSON.stringify(myLeads))
-        // renderLeads()
+        myLeads[titleEl.value] = tabs[0].url
+        titleEl.value = ""
+        localStorage.setItem("myLeads", JSON.stringify(myLeads))
+        renderLeads()
     })
 })
 
 deleteBtn.addEventListener("dblclick", function() {
     localStorage.clear()
-    myLeads = new Object()
+    myLeads = {}
     renderLeads()
 })
 
