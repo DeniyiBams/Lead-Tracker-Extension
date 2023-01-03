@@ -13,12 +13,20 @@ if (leadsFromLocalStorage) {
     renderLeads()
 }
 
+
 inputBtn.addEventListener("click", function() {
-    myLeads[titleEl.value] = inputEl.value
-    inputEl.value=""
-    titleEl.value=""
-    localStorage.setItem("myLeads", JSON.stringify(myLeads))
-    renderLeads()
+    if (titleEl.value === "") {
+        myLeads["Null"] = inputEl.value
+    }
+    if (inputEl.value === "") {
+        alert("Link is empty, input link");
+    } else {
+        myLeads[titleEl.value] = inputEl.value
+        inputEl.value=""
+        titleEl.value=""
+        localStorage.setItem("myLeads", JSON.stringify(myLeads))
+        renderLeads()
+    }
 })
 
 tabBtn.addEventListener("click", function() {
@@ -38,6 +46,11 @@ function renderLeads() {
     
     for (const key in myLeads) {
         listItems += `
+        <thead>
+            <th>Title</th>
+            <th>Link</th>
+        </thead>
+
         <tbody>
             <tr>
                 <td>
@@ -51,5 +64,5 @@ function renderLeads() {
             </tr>
         </tbody`
     }
-    tableEl.innerHTML += listItems
+    tableEl.innerHTML = listItems
 }
